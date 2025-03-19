@@ -1,0 +1,78 @@
+:root {
+      --bg-color: white;
+      --text-color: black;
+  }
+  
+  .dark-mode {
+      --bg-color: black;
+      --text-color: white;
+  }
+  
+  body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .dark-mode header {
+      background: #222;
+      color: white;
+  }
+  header {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      background: #333;
+      color: white;
+  }
+  h1{
+      font-size: 28px;
+  }
+  form {
+      display: grid;
+      gap: 10px;
+      max-width: 300px;
+      margin: 20px auto;
+  }
+  label {
+      font-weight: bold;
+      margin-top: 10px;
+      font-size: 20px;
+  }
+  
+  input {
+      padding: 10px;
+      border: 3px solid #8d8c8c;
+      border-radius: 5px;
+      font-size: 1em;
+      outline: none;
+      transition: border 0.3s ease;
+  }
+  input:focus {
+      border: 1px solid #007BFF;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  }
+  .error-message {
+      color: red;
+      font-size: 0.8em;
+      display: none;
+  }
+ 
+  button {
+      cursor: pointer;
+      padding: 10px;
+      transition: transform 0.2s;
+  }
+  
+  button:hover {
+      transform: scale(1.05);
+  }
+  @media (max-width: 768px) {
+      header {
+          flex-direction: column;
+          align-items: center;
+      }
+      form {
+          width: 90%;
+      }
+  }
